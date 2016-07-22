@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Unterrichtsausfall</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/locales/bootstrap-datepicker.de.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Unterrichtsausfall</h1>
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lehrer">Lehrer</label>
+                    <input class="form-control" id="lehrer" type="text" placeholder="Bitte Lehrer Namen eingeben"/>
+                </div>
+            </div>
+            <div class="col-md-6"><div class="form-group">
+                <label for="fach">Fach</label>
+                <select class="form-control" id="fach"/>
+                <option>Bitte auswählen</option>
+                <option>Mathe</option>
+                <option>Deutsch</option>
+                <option>Englisch</option>
+                <option>Musik</option>
+                <option>Kunst</option>
+                <option>Sport</option>
+                <option>MNT</option>
+                <option>WZG</option>
+                <option>WUI</option>
+                <option>NUT</option>
+                <option>GUS</option>
+                <option>WAG</option>
+                <option>Technik</option>
+                </select>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><div class="form-group">
+                <label for="klasse">Klasse</label>
+                <select class="form-control" id="klasse">
+                    <option>Bitte auswählen</option>
+                    <option>5a</option>
+                    <option>5b</option>
+                    <option>5c</option>
+                    <option>6a</option>
+                    <option>6b</option>
+                    <option>6c</option>
+                    <option>7a</option>
+                    <option>7b</option>
+                    <option>7c</option>
+                    <option>8a</option>
+                    <option>8b</option>
+                    <option>8c</option>
+                    <option>9a</option>
+                    <option>9b</option>
+                    <option>9c</option>
+                    <option>10a</option>
+                    <option>10b</option>
+                    <option>10c</option>
+                </select>
+            </div></div>
+            <div class="col-md-6"><div class="form-group">
+                <label for="datum">Datum</label>
+                <input class="form-control" id="datum" type="date" placeholder="Bitte Datum eingeben"/>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><div class="form-group">
+                <label for="uhrzeit">Uhrzeit</label>
+                <select class="form-control" id="uhrzeit">
+                    <option>Bitte auswählen</option>
+                    <option>8:00-8:45</option>
+                    <option>8:45-9:30</option>
+                    <option>9:50-10:35</option>
+                    <option>10:35-11:20</option>
+                    <option>12:20-13:05</option>
+                    <option>14:00-14:45</option>
+                    <option>14:45-15:30</option>
+                    <option>15:30-16:20</option>
+                </select>
+
+            </div></div>
+            <div class="col-md-6"><div class="checkbox">
+                <label>
+                    <input id="ausfall" type="checkbox">Fällt aus
+                </label>
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6"><div id="vertretungContainer" class="form-group">
+                <label for="vertretung">Vertretung</label>
+                <input class="form-control" id="vertretung" type="text" placeholder="Bitte Namen der Vertretung eingeben">
+            </div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+
+
+        <p></p>
+        <button class="save" type="button">Seichern</button>
+        <button class="delete" type="button">Löschen</button>
+    </form>
+    <script src="schule.js"></script>
+    <div class="plan"></div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Lehrer</th>
+            <th>Fach</th>
+            <th>Klasse</th>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+            <th>Vertretung</th>
+        </tr>
+        </thead>
+        <tbody id="daten"></tbody>
+    </table>
+</div>
+</body>
+</html>

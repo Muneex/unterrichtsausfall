@@ -1,0 +1,23 @@
+.box {
+    margin: 10px;
+    background: blue;
+    color: black;
+    width: 100px;
+    height: 100px;
+    transition: all 2s;
+
+}
+.animated {
+    /*opacity: 0;*/
+  /*  transform: translate(0px, -200px);
+    background: green; */
+
+}
+.container-column {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+}
+.container-row {
+    display: flex;
+    flex-direction: row;
+}

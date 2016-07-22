@@ -1,0 +1,25 @@
+td {
+    border: 1px solid black;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #e4ebf2;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom:8px ;
+}
+.label{
+    width: 150px;
+}
+.input-field{
+    width: 200px;
+    box-sizing:border-box;
+    margin: 0;
+}
+.hidden{
+    opacity: 0;
+}
+
